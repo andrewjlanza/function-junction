@@ -4,7 +4,7 @@
  * construct available in Javascript.
  */
 function max(beans, rice) {
-  return beans > rice ? beans : rice
+  return beans > rice ? beans : rice;
 }
 
 // ...
@@ -15,11 +15,11 @@ function max(beans, rice) {
  */
 function maxOfThree(one, two, three) {
   if (one > two && one > three) {
-    return one
+    return one;
   } else if (two > one && two > three) {
-    return two
+    return two;
   } else {
-    return three
+    return three;
   }
 }
 
@@ -30,7 +30,7 @@ function maxOfThree(one, two, three) {
  * arguments and computes the sum of those two numbers.
  */
 function sum(one, two) {
-  return one + two
+  return one + two;
 }
 // ...
 
@@ -39,11 +39,11 @@ function sum(one, two) {
  * all the numbers in an array.
  */
 function sumOfArray(beans) {
-  var sum = 0
+  var sum = 0;
   for (var i = 0; i < beans.length; i++) {
-    sum += beans[i]
+    sum += beans[i];
   }
-  return sum
+  return sum;
 }
 // ...
 
@@ -53,18 +53,18 @@ function sumOfArray(beans) {
  */
 function isVowel(char) {
   return (
-    char === 'a' ||
-    char === 'e' ||
-    char === 'i' ||
-    char === 'o' ||
-    char === 'u' ||
-    char === 'A' ||
-    char === 'E' ||
-    char === 'I' ||
-    char === 'O' ||
-    char === 'U' ||
+    char === "a" ||
+    char === "e" ||
+    char === "i" ||
+    char === "o" ||
+    char === "u" ||
+    char === "A" ||
+    char === "E" ||
+    char === "I" ||
+    char === "O" ||
+    char === "U" ||
     false
-  )
+  );
 }
 // ...
 
@@ -78,18 +78,18 @@ function isVowel(char) {
  */
 function rovarspraket(beans) {
   if (isNaN(beans)) {
-    let rice = beans.split('')
-    let tacos = ''
+    let rice = beans.split("");
+    let tacos = "";
     rice.forEach(function(letter) {
-      if (!!~'aeiou'.indexOf(letter)) {
-        tacos += letter
+      if (!!~"aeiou".indexOf(letter)) {
+        tacos += letter;
       } else {
-        tacos += letter + 'o' + letter
+        tacos += letter + "o" + letter;
       }
-    })
-    return tacos
+    });
+    return tacos;
   } else {
-    return beans.toString()
+    return beans.toString();
   }
 }
 // ...
@@ -102,9 +102,9 @@ function rovarspraket(beans) {
  */
 function reverse(beans) {
   return beans
-    .split('')
+    .split("")
     .reverse()
-    .join('')
+    .join("");
 }
 // ...
 
@@ -115,17 +115,17 @@ function reverse(beans) {
  * i.e. findLongestWord("book dogs") should return "book"
  */
 const findLongestWord = string => {
-  let stringArray = string.split(' ')
-  let longest = 0
-  let rice = null
+  let stringArray = string.split(" ");
+  let longest = 0;
+  let rice = null;
   for (let i = 0; i < stringArray.length; i++) {
     if (longest < stringArray[i].length) {
-      longest = stringArray[i].length
-      rice = stringArray[i]
+      longest = stringArray[i].length;
+      rice = stringArray[i];
     }
   }
-  return rice
-}
+  return rice;
+};
 // ...
 
 /**
@@ -134,62 +134,62 @@ const findLongestWord = string => {
 
 /* eslint-disable no-undef */
 
-import test from 'ava'
+import test from "ava";
 
-test('max()', t => {
-  t.is(max(1, 3), 3)
-  t.is(max(0, 3), 3)
-  t.is(max(10, 3), 10)
-  t.is(max(-1, -3), -1)
-  t.is(max('aaa', 0), 0)
-  t.true(isNaN(max('aaa', 'bbb')))
-})
+test("max()", t => {
+  t.is(max(1, 3), 3);
+  t.is(max(0, 3), 3);
+  t.is(max(10, 3), 10);
+  t.is(max(-1, -3), -1);
+  t.is(max("aaa", 0), 0);
+  t.true(isNaN(max("aaa", "bbb")));
+});
 
-test('maxOfThree()', t => {
-  t.is(maxOfThree(1, 3, 2), 3)
-  t.is(maxOfThree(0, 3, -1), 3)
-  t.is(maxOfThree(10, 3, 50), 50)
-  t.is(maxOfThree(-1, -3, -10), -1)
-  t.is(maxOfThree('aaa', 0, 1), 1)
-  t.true(isNaN(maxOfThree('aaa', 'bbb', 'ccc')))
-})
+test("maxOfThree()", t => {
+  t.is(maxOfThree(1, 3, 2), 3);
+  t.is(maxOfThree(0, 3, -1), 3);
+  t.is(maxOfThree(10, 3, 50), 50);
+  t.is(maxOfThree(-1, -3, -10), -1);
+  t.is(maxOfThree("aaa", 0, 1), 1);
+  t.true(isNaN(maxOfThree("aaa", "bbb", "ccc")));
+});
 
-test('sum()', t => {
-  t.is(sum(8, 11), 19)
-  t.is(sum(4, 100), 104)
-})
+test("sum()", t => {
+  t.is(sum(8, 11), 19);
+  t.is(sum(4, 100), 104);
+});
 
-test('sumOfArray()', t => {
-  t.is(sumOfArray([1, 2]), 3)
-  t.is(sumOfArray([1, 2, 3]), 6)
-  t.is(sumOfArray([10, 9, 8]), 27)
-  t.is(sumOfArray([]), 0)
-})
+test("sumOfArray()", t => {
+  t.is(sumOfArray([1, 2]), 3);
+  t.is(sumOfArray([1, 2, 3]), 6);
+  t.is(sumOfArray([10, 9, 8]), 27);
+  t.is(sumOfArray([]), 0);
+});
 
-test('isVowel()', t => {
-  t.is(isVowel(0), false)
-  t.is(isVowel('B'), false)
-  t.is(isVowel('b'), false)
-  t.is(isVowel('a'), true)
-  t.is(isVowel('E'), true)
-})
+test("isVowel()", t => {
+  t.is(isVowel(0), false);
+  t.is(isVowel("B"), false);
+  t.is(isVowel("b"), false);
+  t.is(isVowel("a"), true);
+  t.is(isVowel("E"), true);
+});
 
-test('rovarspraket()', t => {
-  t.is(rovarspraket('a'), 'a')
-  t.is(rovarspraket('b'), 'bob')
-  t.is(rovarspraket('cat'), 'cocatot')
-  t.is(rovarspraket('javascript'), 'jojavovasoscocroripoptot')
-  t.is(rovarspraket(0), '0')
-})
+test("rovarspraket()", t => {
+  t.is(rovarspraket("a"), "a");
+  t.is(rovarspraket("b"), "bob");
+  t.is(rovarspraket("cat"), "cocatot");
+  t.is(rovarspraket("javascript"), "jojavovasoscocroripoptot");
+  t.is(rovarspraket(0), "0");
+});
 
-test('reverse()', t => {
-  t.is(reverse('books'), 'skoob')
-  t.is(reverse("we don't want no trouble"), "elbuort on tnaw t'nod ew")
-})
+test("reverse()", t => {
+  t.is(reverse("books"), "skoob");
+  t.is(reverse("we don't want no trouble"), "elbuort on tnaw t'nod ew");
+});
 
-test('findLongestWord()', t => {
-  t.is(findLongestWord('book dogs'), 'book')
-  t.is(findLongestWord('everything'), 'life the universe and everything')
-})
+test("findLongestWord()", t => {
+  t.is(findLongestWord("book dogs"), "book");
+  t.is(findLongestWord("life the universe and everything"), "everything");
+});
 
 /* eslint-enable */
